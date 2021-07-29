@@ -3,6 +3,252 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  &__inner-top {
+    background-color: #31352B;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: #fff;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %lato-700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-style: normal;
+    position: relative;
+    padding-left: 44px;
+    padding-top: 3px;
+    
+  }
+
+  &__link + .header__link {
+    margin-left: 48px;
+  }
+
+  &__link--address::before {
+    content: "";
+    background-image: url(../images/icon-address.svg);
+    width: 32px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+
+  &__link--tel::before {
+    content: "";
+    background-image: url(../images/icon-tel.svg);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__bottom {
+    background-color: #63A60F;
+  }
+
+  &__inner-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 25px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    margin-left: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.catalog {
+  max-width: 240px;
+  width: 100%;
+
+  &__menu {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #63A60E;
+    border: none;
+    position: relative;
+  }
+
+  &__menu::before {
+    content: "";
+    background-image: url(../images/nav_icon.svg);
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    left: 18px;
+    top: 30%;
+  }
+
+  &__menu::after {
+    content: "";
+    background-image: url(../images/arrow-down.svg);
+    width: 10px;
+    height: 7px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.search {
+  display: flex;
+  max-width: 576px;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../images/icon-search.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    text-align: center;
+    border: none;
+
+  }
+
+  &__input::placeholder {
+    color: #31352B;
+  }
+
+  &__btn {
+    width: 157px;
+    height: 50px;
+    background-color: #000;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.user-nav {
+  margin-right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__icon-user {
+    width: 25px;
+    height: 32px;
+  }
+
+  &__icon-heart {
+    width: 32px;
+    height: 28px;
+  }
+
+  &__icon-cart {
+    width: 32px;
+    height: 30px;
+  }
+
+  &__link + .user-nav__link {
+    margin-left: 33px;
+  }
+  &__link--heart {
+    position: relative;
+  }
+
+  &__link--cart {
+    position: relative;
+  }
+
+  &__num {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: $title-span;
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    z-index: 1;
+    background-image: url();
+  }
+}
+
+.slider__box--carot {
+  background-image: url(../images/carot.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.slider__box--tomato {
+  background-image: url(../images/tomato.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.slider__box--greens {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  background-image: url(../images/greens.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';

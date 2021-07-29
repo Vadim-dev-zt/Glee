@@ -6,8 +6,33 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 
+
+const fonts = () => {
+  src('app/fonts/**.ttf')
+  .pipe(ttf2woff())
+  .pipe(dest('app/fonts/'))
+  return src ('app/fonts/**.ttf')
+  .pipe(ttf2woff2())
+  .pipe(dest('app/fonts/'))
+
+}
+
+const svgSprites = () => {
+  return src('app/images/*.svg')
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: "./sprite.svg"
+      }
+    }
+  }))
+  .pipe(dest('app/images'))
+}
 
 function browsersync() {
   browserSync.init({
@@ -33,6 +58,7 @@ function styles() {
 function scripts() {
   return src([
   'node_modules/jquery/dist/jquery.js',
+  'node_modules/slick-carousel/slick/slick.js',
   'app/js/main.js'])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
@@ -73,6 +99,8 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/images/*.svg'], svgSprites);
+  watch(['app/fonts/**.ttf'], fonts);
 }
 
 
@@ -85,5 +113,5 @@ exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build );
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(fonts, styles, scripts,svgSprites, browsersync, watching);
 

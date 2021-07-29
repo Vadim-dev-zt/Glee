@@ -1,4 +1,12 @@
-
 body {
+  font-size: 16px;
+  line-height: 22px;
+  @extend %lato-400;
+  background-color: $bgcolor;
+}
 
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
