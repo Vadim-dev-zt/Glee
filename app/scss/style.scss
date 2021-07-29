@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -202,33 +203,66 @@
     left: -5px;
     top: -10px;
     z-index: 1;
-    background-image: url();
   }
 }
 
-.slider__box--carot {
-  background-image: url(../images/carot.jpg);
-  height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+.slider {
+  &__box {
+    height: 600px;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-top: 143px;
+  }
+
+  &__content {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 709px;
+    width: 100%;
+    padding: 24px 24px 12px;
+    color: #505050;
+    border-radius: 6px;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    background-color: #63A60E;
+    border-radius: 6px;
+    padding: 12px 24px;
+    border: none;
+    color: #fff;
+  }
+
+  &__decoration {
+    color: #CF3E3B;
+  }
 }
 
-.slider__box--tomato {
-  background-image: url(../images/tomato.jpg);
-  height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+.slick-prev,
+.slick-next {
+  border: none;
+  background-color: transparent;
+  padding: 14px 21px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-100%);
+  background-color: #fff;
 }
 
-.slider__box--greens {
-  height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  background-image: url(../images/greens.jpg);
+.slick-prev {
+  left: 50px;
 }
+
+.slick-next {
+  right: 50px;
+}
+
+
 
 
 
