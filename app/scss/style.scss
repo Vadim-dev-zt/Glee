@@ -9,7 +9,7 @@
     background-color: #31352B;
     padding-top: 14px;
     padding-bottom: 14px;
-    color: #fff;
+    color: $bgcolor;
   }
 
   &__top {
@@ -56,7 +56,7 @@
   }
 
   &__bottom {
-    background-color: #63A60F;
+    background-color: $green;
   }
 
   &__inner-bottom {
@@ -86,9 +86,9 @@
   &__menu {
     height: 50px;
     width: 100%;
-    background-color: #fff;
+    background-color: $bgcolor;
     border-radius: 6px;
-    color: #63A60E;
+    color: $green;
     border: none;
     position: relative;
   }
@@ -134,7 +134,7 @@
   &__input {
     width: 100%;
     height: 50px;
-    background-color: #fff;
+    background-color: $bgcolor;
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
     text-align: center;
@@ -153,7 +153,7 @@
     border: none;
     border-bottom-right-radius: 6px;
     border-top-right-radius: 6px;
-    color: #fff;
+    color: $bgcolor;
     text-transform: uppercase;
   }
 }
@@ -193,12 +193,12 @@
   &__num {
     width: 18px;
     height: 18px;
-    background-color: #fff;
+    background-color: $bgcolor;
     border-radius: 50%;
     font-size: 10px;
     line-height: 20px;
     text-align: center;
-    color: $title-span;
+    color: $red;
     position: absolute;
     left: -5px;
     top: -10px;
@@ -220,7 +220,7 @@
     max-width: 709px;
     width: 100%;
     padding: 24px 24px 12px;
-    color: #505050;
+    color: $title;
     border-radius: 6px;
   }
 
@@ -230,15 +230,15 @@
 
   &__btn {
     margin-top: 30px;
-    background-color: #63A60E;
+    background-color: $green-btn;
     border-radius: 6px;
     padding: 12px 24px;
     border: none;
-    color: #fff;
+    color: $bgcolor;
   }
 
   &__decoration {
-    color: #CF3E3B;
+    color: $red;
   }
 }
 
@@ -251,7 +251,7 @@
   z-index: 1;
   top: 50%;
   transform: translateY(-100%);
-  background-color: #fff;
+  background-color: $bgcolor;
 }
 
 .slick-prev {
@@ -329,7 +329,7 @@
 
 .footer {
   background-color: #31352B;
-  color: #fff;
+  color: $bgcolor;
 
     &__img {
     padding-top: 30px;
@@ -337,7 +337,7 @@
     }
 
     &__form {
-      color: #fff;
+      color: $bgcolor;
     }
 
     &__search {
@@ -350,7 +350,7 @@
 
     &__input {
       padding: 12px;
-      background-color: #fff;
+      background-color: $bgcolor;
       border-bottom-left-radius: 6px;
       border-top-left-radius: 6px;
       border: none;
@@ -362,11 +362,11 @@
     }
 
     &__btn {
-      background-color: #63A60E;
+      background-color: $green-btn;
       border: none;
       border-bottom-right-radius: 6px;
       border-top-right-radius: 6px;
-      color: #fff;
+      color: $bgcolor;
       text-transform: uppercase;
       padding: 0;
       text-align: center;
@@ -380,7 +380,7 @@
     &__info {
       display: flex;
       margin-left: 153px;
-      color: #fff;
+      color: $bgcolor;
       padding-bottom: 30px;
     }
 
@@ -390,7 +390,7 @@
     }
 
     &__bottom-line {
-      border-top: 2px solid #fff;
+      border-top: 2px solid $bgcolor;
       opacity: 0.1;
     }
 
